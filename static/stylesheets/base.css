@@ -1,0 +1,11 @@
+#navbarSupportedContent{
+    background-color: rgba(0, 0, 0, 0.192)
+}
+
+#search-bar{
+    display: flex;
+    width:auto;
+    position: absolute;
+    right: 1rem;
+
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{%block body%}
+<table class="table">
+    <thead class="thead-dark">
+      <tr >
+        <th scope="col" class="table-header">#</th>
+        <th scope="col" class="table-header">Company</th>
+        <th scope="col" class="table-header">Position</th>
+        <th scope="col" class="table-header">Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for post in job_list %}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{post[2]}}</td>
+        <td>{{post[3]}}</td>
+        <td>{{post[4]}}</td>
+        <td><a href="/apply/{{post[0]}}"><button class="btn btn-primary">Apply</button></a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {%endblock body%}
