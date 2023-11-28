@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+{%block link%}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/login.css') }}">
+{%endblock link%}
+{%block body%}
+<div id="window">
+    <div id="container">
+        <h1>TEST</h1>
+      <form action="/test/{{job_id}}" method="post">
+        <div class="mb-3">
+          <label for="answer1" class="form-label">{{testcontent[1]}}</label>
+          <input type="number" name="ans1" class="form-control" id="answer1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="answer2" class="form-label">{{testcontent[2]}}</label>
+          <input type="number" name="ans2" class="form-control" id="answer2">
+        </div>
+        <div class="mb-3">
+            <label for="answer3" class="form-label">{{testcontent[3]}}</label>
+            <input type="number" name="ans3" class="form-control" id="answer3">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Submit Test</button>
+      </form>
+    </div>
+    </div>
+{%endblock body%}

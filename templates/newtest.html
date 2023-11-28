@@ -1,0 +1,42 @@
+{%extends "base2.html"%}
+{%block link%}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/apply.css') }}">
+{%endblock link%}
+{%block body%}
+<div id="window">
+    <div id="container">
+        <h1>New Test</h1>
+      <form action="/newtest" method="post">
+        <div class="mb-3">
+          <label for="testname" class="form-label">Test Name</label>
+          <input type="text" name="test_name" class="form-control" id="testname" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="question1" class="form-label">Question1</label>
+          <input type="text" name="ques1" class="form-control" id="question1">
+        </div>
+        <div class="mb-3">
+            <label for="question2" class="form-label">Question2</label>
+            <input type="text" name="ques2" class="form-control" id="question2">
+          </div>
+          <div class="mb-3">
+            <label for="question3" class="form-label">Question3</label>
+            <input type="text" name="ques3" class="form-control" id="question3">
+          </div>
+        <div class="mb-3">
+            <label for="answer1" class="form-label">Answer1</label>
+            <input type="number" name="ans1" class="form-control" id="answer1">
+        </div>
+        <div class="mb-3">
+            <label for="answer2" class="form-label">Answer1</label>
+            <input type="number" name="ans2" class="form-control" id="answer2">
+        </div>
+        <div class="mb-3">
+            <label for="answer3" class="form-label">Answer1</label>
+            <input type="number" name="ans3" class="form-control" id="answer3">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Create Test</button>
+      </form>
+    </div>
+    </div>
+{%endblock body%}

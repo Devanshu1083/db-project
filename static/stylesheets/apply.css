@@ -1,0 +1,36 @@
+#container{
+    width: 50vw;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.079);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    align-self: center;
+}
+#window{
+    width:100vw;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+button{
+    align-self:center
+}
+#submit-btn{
+    width:40%;  
+}
+#search-bar{
+    display: flex;
+    width:auto;
+    position: absolute;
+    right: 1rem;
+
+}

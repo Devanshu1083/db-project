@@ -1,0 +1,48 @@
+{% extends "base2.html" %}
+{%block link%}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/myapp.css') }}">
+{%endblock link%}
+{%block body%}
+<table class="table">
+    <h1>Details</h1>
+    <thead class="thead-dark">
+      <tr >
+        <th scope="col" class="table-header">#</th>
+        <th scope="col" class="table-header">Attribute</th>
+        <th scope="col" class="table-header">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Name</td>
+        <td>{{applicant[0]}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>College</td>
+        <td>{{applicant[1]}}</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Resume</td>
+        <td>{{applicant[2]}}</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>CGPA</td>
+        <td>{{applicant[3]}}</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Address</td>
+        <td>{{applicant[4]}}</td>
+      </tr>
+    <tr>
+        <th scope="row"></th>
+        <td><a href="/reject/{{application_id}}"><button class="btn btn-primary">Reject</button></a></td>
+        <td><a href="/select/{{application_id}}"><button class="btn btn-primary">Select</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+  {%endblock body%}

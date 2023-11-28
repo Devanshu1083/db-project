@@ -1,0 +1,25 @@
+{% extends "base2.html" %}
+{%block body%}
+<table class="table">
+    <h1>Your Tests</h1>
+    <thead class="thead-dark">
+      <tr >
+        <th scope="col" class="table-header">#</th>
+        <th scope="col" class="table-header">Test Name</th>
+        <th scope="col" class="table-header">Test ID</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for test in test_list %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{test[1]}}</td>
+        <td>{{test[0]}}</td>
+        <td><a href="/modifytest/{{test[0]}}"><button class="btn btn-primary">Modify</button></a>
+            <a href="/deletetest/{{test[0]}}"><button class="btn btn-primary">Delete</button></a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {%endblock body%}
